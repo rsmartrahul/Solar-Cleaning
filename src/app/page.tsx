@@ -9,7 +9,7 @@ import styles from '@/styles/shop.module.css';
 
 import WhyChooseUs from '@/components/WhyChooseUs';
 import BusinessStats from '@/components/BusinessStats';
-import Testimonials from '@/components/Testimonials';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQAccordion from '@/components/FAQAccordion';
 import RequestQuoteForm from '@/components/RequestQuoteForm';
 import ContactNewsletter from '@/components/ContactNewsletter';
@@ -233,7 +233,7 @@ export default function ShopCatalog() {
         {/* Enterprise B2B Sections */}
         <WhyChooseUs />
         <BusinessStats />
-        <Testimonials />
+        <TestimonialsSection />
         <FAQAccordion />
         <RequestQuoteForm />
         <ContactNewsletter />
