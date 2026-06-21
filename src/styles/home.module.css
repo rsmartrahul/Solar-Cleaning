@@ -1,0 +1,840 @@
+/* ==========================================
+   Home & Global Section Styles
+   ========================================== */
+
+.sectionPadding {
+  padding: 5.5rem 2rem;
+  background: var(--bg-base);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  position: relative;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Why Choose Us Section
+   ========================================== */
+
+.whyChooseUsSection {
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.03), var(--bg-surface));
+  border-radius: var(--border-radius-xl);
+  padding: 5rem 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.featureCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(var(--primary-rgb), 0.25);
+}
+
+.featureIcon {
+  font-size: 2.25rem;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--primary-rgb), 0.08);
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+  transition: transform var(--transition-normal);
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.featureTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.featureDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Business Stats Section
+   ========================================== */
+
+.statsBg {
+  background: linear-gradient(180deg, var(--bg-base) 0%, rgba(var(--primary-rgb), 0.03) 100%);
+  padding: 5rem 2rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.statItem {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.statItem:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(var(--primary-rgb), 0.2);
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   Testimonials Section (B2B Blue & White SaaS)
+   ========================================== */
+
+.testimonialsMarquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0;
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marqueeContent {
+  display: flex;
+  gap: 1.75rem;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.marqueeContent:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 0.875rem));
+  }
+}
+
+.testimonialCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.testimonialCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.testimonialCardModern {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(10, 74, 156, 0.08); /* Subtle B2B Blue tint border */
+  border-radius: 24px; /* 24px Rounded Corners */
+  padding: 2.5rem 2.25rem;
+  width: 350px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Lift Animation & Blue Highlight */
+.testimonialCardModern:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl), 0 12px 30px rgba(10, 74, 156, 0.04);
+  border-color: rgba(10, 74, 156, 0.25);
+  background: var(--bg-surface);
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--secondary-blue);
+  opacity: 0.05;
+  pointer-events: none;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.testimonialCardModern:hover .quoteIcon {
+  transform: scale(1.15) rotate(-6deg);
+  opacity: 0.1;
+}
+
+.testiHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testiAvatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(10, 74, 156, 0.15); /* Blue themed avatar border */
+  box-shadow: var(--shadow-sm);
+}
+
+.testiName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.testiCompany {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.verifiedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(10, 74, 156, 0.06); /* Blue theme verified badge background */
+  color: var(--secondary-blue); /* Professional B2B blue text */
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-top: 0.4rem;
+}
+
+html.dark .verifiedBadge {
+  background: rgba(10, 74, 156, 0.15);
+  color: #38bdf8;
+}
+
+.verifiedIcon {
+  color: currentColor;
+  flex-shrink: 0;
+}
+
+.testiStars {
+  color: var(--accent); /* Elegant gold/orange stars */
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.75rem 0;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
+}
+
+.testiText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Client Logo Slider Section */
+.logoSlider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+}
+
+.logoSliderTrack {
+  display: flex;
+  gap: 5rem;
+  width: max-content;
+  animation: logoScroll 30s linear infinite;
+  align-items: center;
+}
+
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-33.333% - 1.666rem));
+  }
+}
+
+.logoWrapper {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  opacity: 0.65;
+  transition: opacity var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+
+.logoWrapper:hover {
+  opacity: 1;
+  color: var(--secondary-blue); /* Turns B2B Blue on hover */
+  transform: scale(1.06);
+}
+
+.logoSvg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Trust Indicators B2B SaaS Grid */
+.trustIndicatorsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.trustCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 24px; /* Matches testimonials 24px border radius */
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trustCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(10, 74, 156, 0.25);
+}
+
+.trustIcon {
+  font-size: 2rem;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: rgba(10, 74, 156, 0.05); /* Blue base icon bg */
+  color: var(--secondary-blue);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.trustCard:hover .trustIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.trustValue {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, #0082e6 100%); /* Enforce blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.trustLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ==========================================
+   FAQ Accordion
+   ========================================== */
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: var(--bg-surface);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.faqItem:hover {
+  border-color: rgba(var(--primary-rgb), 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.faqHeader {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-surface);
+  border: none;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.faqHeader:hover {
+  background: var(--bg-base);
+}
+
+.faqIcon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: transform var(--transition-normal);
+}
+
+.faqItem.active .faqIcon {
+  transform: rotate(45deg);
+}
+
+.faqContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal), padding var(--transition-normal);
+  padding: 0 1.5rem;
+}
+
+.faqItem.active .faqContent {
+  max-height: 500px;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.faqText {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Request Custom Pricing Form
+   ========================================== */
+
+.quoteContainer {
+  background: var(--bg-surface);
+  padding: 3rem;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quoteFormGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroupFull {
+  grid-column: span 2;
+}
+
+.formLabel {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.formInput,
+.formTextarea {
+  padding: 0.85rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  background: var(--bg-surface);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+.btn {
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btnPrimary {
+  background: var(--gradient-primary);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(var(--primary-rgb), 0.3);
+}
+
+.submitBtn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ==========================================
+   Get In Touch & Newsletter Section
+   ========================================== */
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+  align-items: stretch;
+}
+
+.contactInfoCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-xl);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.contactDetail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.contactDetailIcon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.08);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal), background-color var(--transition-normal);
+}
+
+.contactDetail:hover .contactDetailIcon {
+  transform: scale(1.08);
+  background: rgba(var(--primary-rgb), 0.12);
+}
+
+.contactDetailText h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+.contactDetailText p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.mapContainer {
+  width: 100%;
+  min-height: 350px;
+  height: 100%;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.newsletterCard {
+  background: var(--gradient-glow);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-xl);
+  padding: 4rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletterCard::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: rgba(var(--primary-rgb), 0.04);
+  filter: blur(100px);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.newsletterTitle {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.02em;
+}
+
+.newsletterDesc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.newsletterInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+.newsletterBtn {
+  background: var(--gradient-primary);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
+  white-space: nowrap;
+}
+
+.newsletterBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(var(--primary-rgb), 0.3);
+}
+
+/* ==========================================
+   Responsive & Media Breakpoints
+   ========================================== */
+
+@media (max-width: 992px) {
+  .sectionPadding {
+    padding: 4rem 1.5rem;
+  }
+  .whyChooseUsSection {
+    padding: 4rem 1.5rem;
+  }
+  .quoteContainer {
+    padding: 2.5rem 2rem;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trustIndicatorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .logoSliderTrack {
+    gap: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .newsletterTitle {
+    font-size: 1.75rem;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  .quoteFormGrid {
+    grid-template-columns: 1fr;
+  }
+  .formGroupFull {
+    grid-column: span 1;
+  }
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .mapContainer {
+    min-height: 300px;
+  }
+  .newsletterCard {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .trustIndicatorsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .newsletterForm {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .newsletterBtn {
+    width: 100%;
+  }
+  .logoSliderTrack {
+    gap: 2.5rem;
+  }
+}

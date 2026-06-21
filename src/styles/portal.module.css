@@ -1,0 +1,208 @@
+.portalContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .portalContainer {
+    flex-direction: column;
+  }
+}
+
+.half {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  transition: all var(--transition-slow);
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Solar cleaning side styling */
+.solarHalf {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.8)),
+              url('/logo.jpg') center/cover no-repeat;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Mushroom packaging side styling */
+.mushroomHalf {
+  background: linear-gradient(135deg, rgba(28, 25, 23, 0.95), rgba(87, 83, 78, 0.85)),
+              url('/logo.jpg') center/cover no-repeat;
+}
+
+/* Split screen expand on hover effect */
+@media (min-width: 769px) {
+  .half:hover {
+    flex: 1.4;
+    z-index: 2;
+  }
+  
+  .solarHalf:hover {
+    box-shadow: 20px 0 50px rgba(2, 132, 199, 0.2);
+  }
+  
+  .mushroomHalf:hover {
+    box-shadow: -20px 0 50px rgba(45, 106, 79, 0.2);
+  }
+}
+
+.card {
+  max-width: 440px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  transition: all var(--transition-normal);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.solarCard {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.solarCard:hover {
+  border-color: var(--theme-solar-primary);
+  box-shadow: 0 12px 40px 0 rgba(2, 132, 199, 0.3);
+}
+
+.mushroomCard {
+  background: rgba(43, 38, 35, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 163, 115, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.mushroomCard:hover {
+  border-color: var(--theme-mush-primary);
+  box-shadow: 0 12px 40px 0 rgba(45, 106, 79, 0.3);
+}
+
+.logoBadge {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  padding: 4px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+}
+
+.solarTag {
+  color: var(--theme-solar-secondary);
+}
+
+.mushTag {
+  color: var(--theme-mush-secondary);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.solarTitle {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, var(--theme-solar-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mushTitle {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, var(--theme-mush-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btnSolar {
+  background: linear-gradient(135deg, var(--theme-solar-primary), var(--theme-solar-secondary));
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+}
+
+.btnSolar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
+}
+
+.btnMush {
+  background: linear-gradient(135deg, var(--theme-mush-primary), var(--theme-mush-secondary));
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(45, 106, 79, 0.4);
+}
+
+.btnMush:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(45, 106, 79, 0.6);
+}
+
+.middleOr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  z-index: 10;
+  font-family: var(--font-heading);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .middleOr {
+    display: none;
+  }
+  .half {
+    padding: 2.5rem 1.5rem;
+  }
+}

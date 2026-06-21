@@ -1,0 +1,570 @@
+/* ============================================
+   PREMIUM FOOTER — Solar & MycoPack
+   Matches screenshot exactly
+   ============================================ */
+
+/* ---- CTA BANNER ---- */
+.ctaBanner {
+  position: relative;
+  background: var(--footer-cta-bg);
+  overflow: hidden;
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.ctaBannerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.ctaBannerLeft {
+  flex: 1;
+}
+
+.ctaBannerIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ctaBannerTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.ctaBannerDesc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.ctaBannerActions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.75rem;
+  background: var(--footer-btn-bg);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.ctaBtnPrimary:hover {
+  background: var(--footer-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.75rem;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid rgba(255,255,255,0.5);
+  white-space: nowrap;
+}
+
+.ctaBtnOutline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-2px);
+}
+
+.ctaBannerImages {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 35%;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ctaImgLeft,
+.ctaImgRight {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+/* ---- MAIN FOOTER BODY ---- */
+.footerMain {
+  background: var(--footer-bg);
+  padding: 3.5rem 4rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1.4fr;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footerCol {}
+
+.footerBrandCol {}
+
+/* Brand Logo */
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footerLogoImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--footer-accent);
+}
+
+.footerLogoName {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.footerLogoName span {
+  color: var(--footer-accent);
+}
+
+.footerLogoTagline {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.footerBrandDesc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+/* Social icons */
+.socialRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socialBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.socialBtn:hover {
+  transform: scale(1.12);
+}
+
+.socialLi { background: #0077b5; }
+.socialFb { background: #1877f2; }
+.socialIg { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.socialYt { background: #ff0000; }
+.socialWa { background: #25d366; }
+
+/* Column headings */
+.footerColTitle {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.colIcon {
+  font-size: 0.9rem;
+}
+
+/* Link lists */
+.footerLinkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerLinkList li a {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.footerLinkList li a:hover {
+  color: var(--footer-accent);
+}
+
+.footerLinkList li a span {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+}
+
+/* Contact list */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.contactItem {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contactLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 0.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contactValue {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.4;
+}
+
+/* ---- FEATURE BADGES ROW ---- */
+.featureBadgesRow {
+  background: var(--footer-badges-bg);
+  padding: 1.75rem 4rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.featureBadgesGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.featureBadge {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.featureBadgeIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.featureBadgeTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.featureBadgeDesc {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.4;
+}
+
+/* ---- NEWSLETTER STRIP ---- */
+.newsletterStrip {
+  background: var(--footer-newsletter-bg);
+  padding: 2.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletterContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.newsletterLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+
+.newsletterIconWrap {
+  width: 52px;
+  height: 52px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.newsletterTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.newsletterDesc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0;
+  flex: 1;
+  max-width: 520px;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-right: none;
+}
+
+.newsletterInput::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.newsletterBtn {
+  padding: 0.85rem 1.75rem;
+  background: var(--footer-btn-bg);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.newsletterBtn:hover {
+  background: var(--footer-btn-hover);
+}
+
+.subscribedMsg {
+  color: var(--footer-accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.newsletterBgImg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 22%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+/* ---- BOTTOM BAR ---- */
+.footerBottom {
+  background: var(--footer-bottom-bg);
+  padding: 1.1rem 4rem;
+}
+
+.footerBottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  gap: 1rem;
+}
+
+.footerBottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footerBottomLinks a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerBottomLinks a:hover {
+  color: var(--footer-accent);
+}
+
+.footerBottomRight {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1280px) {
+  .footerGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .featureBadgesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaBanner,
+  .footerMain,
+  .featureBadgesRow,
+  .newsletterStrip,
+  .footerBottom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .ctaBannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ctaBannerImages {
+    display: none;
+  }
+
+  .ctaBannerActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ctaBtnPrimary,
+  .ctaBtnOutline {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featureBadgesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletterContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletterForm {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footerBottomInner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureBadgesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBannerTitle {
+    font-size: 1.6rem;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .newsletterInput {
+    border-radius: 10px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .newsletterBtn {
+    border-radius: 10px;
+    text-align: center;
+  }
+}

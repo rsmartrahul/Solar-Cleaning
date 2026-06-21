@@ -1,0 +1,222 @@
+/* Dashboard Layout and Content */
+.adminContent {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .adminContent {
+    padding: 1rem;
+    height: auto;
+    padding-bottom: 80px;
+  }
+}
+
+.adminTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.statCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.statDesc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Data Listing Grid Table */
+.tableContainer {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+  min-width: 700px;
+}
+
+.adminTable th, .adminTable td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.adminTable th {
+  background: var(--bg-surface-elevated);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.adminTable tbody tr:hover {
+  background: rgba(148, 163, 184, 0.03);
+}
+
+.actionsCell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionBtn {
+  border: none;
+  background: transparent;
+  padding: 0.4rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+}
+
+.editBtn {
+  color: var(--primary);
+}
+
+.editBtn:hover {
+  background: rgba(2, 132, 199, 0.1);
+}
+
+.deleteBtn {
+  color: rgb(239, 68, 68);
+}
+
+.deleteBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Admin CRUD Modal Overlays */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-xl);
+  padding: 2.5rem;
+  max-width: 550px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modalTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.selectInput {
+  padding: 0.7rem 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.specsBuilder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-surface-elevated);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border);
+}
+
+.specRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Status Select elements */
+.statusSelect {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.statusSelect:focus {
+  outline: none;
+  border-color: var(--primary);
+}

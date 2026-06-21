@@ -1,0 +1,156 @@
+{
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password": "adminpassword",
+      "name": "Admin Manager",
+      "role": "admin",
+      "createdAt": "2026-06-12T00:00:00.000Z"
+    },
+    {
+      "email": "user@example.com",
+      "password": "userpassword",
+      "name": "Rahul Kumar",
+      "role": "user",
+      "createdAt": "2026-06-12T00:00:00.000Z"
+    },
+    {
+      "email": "rahulkahin@gmail.com",
+      "password": "Rahul@123",
+      "name": "Rahul Kumar",
+      "role": "user",
+      "createdAt": "2026-06-17T18:33:16.875Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "solar-chemical-1",
+      "title": "SolarShine Pro Cleaning Agent (5L)",
+      "description": "An eco-friendly, biodegradable cleaning chemical specifically formulated for B2B solar arrays. Gently lifts dust, industrial grime, and pollen without residue, boosting panel absorption.",
+      "price": 29.99,
+      "category": "Cleaning Chemicals",
+      "businessType": "solar",
+      "image": "/logo.jpg",
+      "stock": 120,
+      "specs": {
+        "Volume": "5 Liters",
+        "Biodegradable": "Yes (100% Organic)",
+        "pH Level": "Neutral (7.0)",
+        "Dilution Ratio": "1:10 with pure water"
+      }
+    },
+    {
+      "id": "solar-brush-2",
+      "title": "Dual-Trim Solar Panel Brush Head",
+      "description": "Premium B2B solar brush featuring soft micro-split nylon bristles and built-in fan rinse jets. Provides scratch-free scrubbing for maximum efficiency.",
+      "price": 39.99,
+      "category": "Brushes",
+      "businessType": "solar",
+      "image": "/logo.jpg",
+      "stock": 85,
+      "specs": {
+        "Width": "14 inches (35cm)",
+        "Bristle Type": "Ultra-soft nylon",
+        "Rinse Jets": "4 built-in fan jets",
+        "Connection": "Standard gooseneck socket"
+      }
+    },
+    {
+      "id": "solar-equipment-3",
+      "title": "Water-Fed Telescopic Pole (6m)",
+      "description": "High-quality, lightweight aircraft aluminum water-fed pole extending up to 6 meters. Ideal for cleaning solar panels safely from the ground.",
+      "price": 149.99,
+      "category": "Equipment",
+      "businessType": "solar",
+      "image": "/logo.jpg",
+      "stock": 35,
+      "specs": {
+        "Extended Length": "6 Meters (20 Feet)",
+        "Collapsed Length": "1.8 Meters",
+        "Material": "Aircraft Aluminum",
+        "Weight": "2.4 kg"
+      }
+    },
+    {
+      "id": "solar-kit-4",
+      "title": "Complete Solar Maintenance Kit",
+      "description": "All-in-one bundle for solar array upkeep. Includes the 6m aluminum pole, water-fed brush head, 5L organic chemical spray, and squeegee.",
+      "price": 199.99,
+      "category": "Cleaning Kits",
+      "businessType": "solar",
+      "image": "/logo.jpg",
+      "stock": 15,
+      "specs": {
+        "Contents": "Telescopic Pole, Brush Head, 5L Spray, 12-inch Squeegee",
+        "Warranty": "2 Year Limited",
+        "Difficulty": "Beginner to Professional"
+      }
+    },
+    {
+      "id": "mush-tray-1",
+      "title": "MycoMold Biodegradable Trays (Pack of 50)",
+      "description": "Eco-friendly agricultural trays grown from mushroom mycelium and agricultural waste. 100% home compostable, providing superior cushioning.",
+      "price": 45,
+      "category": "Mushroom Trays",
+      "businessType": "mushroom",
+      "image": "/logo.jpg",
+      "stock": 200,
+      "specs": {
+        "Pack Size": "50 Trays",
+        "Material": "Hemp Hurd + Mycelium",
+        "Compost Time": "30-45 Days in soil",
+        "Dimensions": "15cm x 15cm x 5cm"
+      }
+    },
+    {
+      "id": "mush-punnet-2",
+      "title": "Kraft Organic Punnet Boxes (Pack of 100)",
+      "description": "Recycled Kraft paperboard punnets designed specifically for organic dry mushroom farming retail display. Breathable design with side ventilation slots.",
+      "price": 24.99,
+      "category": "Punnets",
+      "businessType": "mushroom",
+      "image": "/logo.jpg",
+      "stock": 500,
+      "specs": {
+        "Pack Size": "100 Units",
+        "Capacity": "250g to 400g mushrooms",
+        "Ventilation": "8 side slots",
+        "Material": "100% Recycled Kraft paperboard"
+      }
+    },
+    {
+      "id": "mush-bag-3",
+      "title": "Compostable Breathable Produce Bags (500 Pack)",
+      "description": "Lightweight, breathable checkout bags for farming fresh produce and mushrooms. Breathability prevents early rotting of delicate fungi.",
+      "price": 34.99,
+      "category": "Produce Bags",
+      "businessType": "mushroom",
+      "image": "/logo.jpg",
+      "stock": 1000,
+      "specs": {
+        "Pack Size": "500 Bags",
+        "Material": "Corn starch bioplastic",
+        "Certification": "OK Compost Home",
+        "Thickness": "15 microns"
+      }
+    },
+    {
+      "id": "mush-carton-4",
+      "title": "MycoShield Heavy-Duty Cartons (10 Pack)",
+      "description": "Double-walled corrugated shipping cartons with mycelium corner buffers for B2B mushroom supply chains.",
+      "price": 59.99,
+      "category": "Cartons",
+      "businessType": "mushroom",
+      "image": "/logo.jpg",
+      "stock": 50,
+      "specs": {
+        "Pack Size": "10 Cartons",
+        "Internal Protection": "Included Mycelium corner guards",
+        "Dimensions": "60cm x 40cm x 30cm",
+        "Stacking Strength": "Up to 150 kg"
+      }
+    }
+  ],
+  "orders": [],
+  "quotes": []
+}
