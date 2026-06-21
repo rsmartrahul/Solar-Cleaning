@@ -18,8 +18,9 @@ export default function Navbar() {
   const { wishlist, darkMode, toggleDarkMode } = useExtraFeatures();
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [productsOpen, setProductsOpen] = useState(false);
-  const [profileOpen, setProfileOpen] = useState(false);
+const [productsOpen, setProductsOpen] = useState(false);
+const [profileOpen, setProfileOpen] = useState(false);
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const productsRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
@@ -59,7 +60,10 @@ export default function Navbar() {
 
         </Link>
 
-        {/* Mega Navigation Menu */}
+        {/* Hamburger button for mobile */}
+        <button className={styles.hamburgerBtn} onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Menu">
+          &#9776;
+        </button>
         <div className={styles.navLinks}>
           <Link href="/" className={`${styles.navLink} ${isLinkActive('/')}`}>
             Home
@@ -190,6 +194,18 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+{/* Mobile slide-in menu */}
+<div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+  <button className={styles.hamburgerBtn} onClick={() => setMobileMenuOpen(false)} aria-label="Close">&times;</button>
+  <div className={styles.navLinks} onClick={() => setMobileMenuOpen(false)}>
+    <Link href="/" className={`${styles.navLink} ${isLinkActive('/')}`}>Home</Link>
+    <Link href="/product" className={`${styles.navLink} ${isLinkActive('/product')}`}>Product</Link>
+    <Link href="/industries" className={`${styles.navLink} ${isLinkActive('/industries')}`}>Industries</Link>
+    <Link href="/about" className={`${styles.navLink} ${isLinkActive('/about')}`}>About Us</Link>
+    <Link href="/contact" className={`${styles.navLink} ${isLinkActive('/contact')}`}>Contact</Link>
+    <Link href="/enquiry" className={`${styles.navLink} ${isLinkActive('/enquiry')}`}>Enquiry</Link>
+  </div>
+</div>
     </div>
   );
 }
