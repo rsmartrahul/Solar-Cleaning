@@ -53,10 +53,6 @@ export default function Navbar() {
         {/* Logo Section with Text */}
         <Link href="/" className={styles.logoContainer}>
           <Image src="/logo.png" alt="Solar Clean" className={styles.logoImage} width={120} height={40} priority />
-          <div className={styles.logoTextBlock}>
-            <h2>Solar Clean</h2>
-            <p>Industrial Cleaning Solutions</p>
-          </div>
         </Link>
 
         {/* Desktop Navigation */}
