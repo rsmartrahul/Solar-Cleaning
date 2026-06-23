@@ -11,7 +11,7 @@ const testimonials = [
     rating: 5,
     review: "The cleaning equipment boosted our productivity by 30% and the eco‑friendly packaging reduced waste dramatically.",
     avatar: '/profile_placeholder_1782066946763.png', // generated placeholder image
-    companyLogo: '/logo_solartech.png',
+    companyLogo: '/logo_placeholder.png',
   },
   {
     name: 'Rohit Sharma',
@@ -20,7 +20,7 @@ const testimonials = [
     rating: 5,
     review: "Switching to sustainable packaging cut our carbon footprint in half while keeping customers delighted.",
     avatar: '/profile_placeholder_1782066946763.png',
-    companyLogo: '/logo_greenpack.png',
+    companyLogo: '/logo_placeholder.png',
   },
   {
     name: 'Sneha Kapoor',
@@ -29,7 +29,7 @@ const testimonials = [
     rating: 5,
     review: "The reliability of the solar cleaning kits has saved us countless hours of manual labor.",
     avatar: '/profile_placeholder_1782066946763.png',
-    companyLogo: '/logo_sunclean.png',
+    companyLogo: '/logo_placeholder.png',
   },
   {
     name: 'Vikram Singh',
@@ -38,7 +38,7 @@ const testimonials = [
     rating: 5,
     review: "Our partnership has been a game‑changer for scaling sustainable packaging across 200+ SKUs.",
     avatar: '/profile_placeholder_1782066946763.png',
-    companyLogo: '/logo_ecoware.png',
+    companyLogo: '/logo_placeholder.png',
   },
   {
     name: 'Priya Patel',
@@ -47,7 +47,7 @@ const testimonials = [
     rating: 5,
     review: "The seamless integration with our ERP made onboarding a breeze and increased order speed.",
     avatar: '/profile_placeholder_1782066946763.png',
-    companyLogo: '/logo_brightsolar.png',
+    companyLogo: '/logo_placeholder.png',
   },
 ];
 
@@ -59,11 +59,11 @@ const stats = [
 ];
 
 const trustedLogos = [
-  '/logo_solartech.png',
-  '/logo_greenpack.png',
-  '/logo_sunclean.png',
-  '/logo_ecoware.png',
-  '/logo_brightsolar.png',
+  '/logo_placeholder.png',
+  '/logo_placeholder.png',
+  '/logo_placeholder.png',
+  '/logo_placeholder.png',
+  '/logo_placeholder.png',
 ];
 
 export default function TestimonialsSection() {

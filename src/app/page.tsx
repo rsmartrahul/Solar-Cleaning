@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Navbar from '@/components/Navbar';
+
 import BottomNav from '@/components/BottomNav';
 import ProductCard from '@/components/ProductCard';
 import { Product } from '@/lib/db';
@@ -106,7 +106,7 @@ export default function ShopCatalog() {
 
   return (
     <div className={styles.layout}>
-      <Navbar />
+
 
       <main className={styles.mainContent}>
         

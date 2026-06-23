@@ -2,7 +2,7 @@
 
 import { use, useEffect, useState } from 'react';
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
+
 import BottomNav from '@/components/BottomNav';
 import { useCart } from '@/components/CartProvider';
 import { Product } from '@/lib/db';
@@ -57,7 +57,7 @@ export default function ProductDetails({ params }: PageProps) {
   if (loading) {
     return (
       <div className={styles.layout}>
-        <Navbar />
+
         <main className={styles.mainContent} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '60vh' }}>
           <div style={{
             display: 'inline-block',
@@ -77,7 +77,7 @@ export default function ProductDetails({ params }: PageProps) {
   if (!product) {
     return (
       <div className={styles.layout}>
-        <Navbar />
+
         <main className={styles.mainContent} style={{ textAlign: 'center', padding: '6rem 2rem' }}>
           <h2>Product Not Found</h2>
           <p style={{ margin: '1rem 0 2rem 0', color: 'var(--text-secondary)' }}>
@@ -94,7 +94,7 @@ export default function ProductDetails({ params }: PageProps) {
 
   return (
     <div className={styles.layout}>
-      <Navbar />
+
 
       <main className={styles.mainContent}>
         <div className="container">

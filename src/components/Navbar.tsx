@@ -8,6 +8,7 @@ import { useCart } from './CartProvider';
 import { useAuth } from './AuthProvider';
 import { useExtraFeatures } from './ExtraFeaturesProvider';
 import styles from '@/styles/components.module.css';
+import Image from 'next/image';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -18,18 +19,13 @@ export default function Navbar() {
   const { wishlist, darkMode, toggleDarkMode } = useExtraFeatures();
 
   const [searchQuery, setSearchQuery] = useState('');
-const [productsOpen, setProductsOpen] = useState(false);
-const [profileOpen, setProfileOpen] = useState(false);
-const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const productsRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (productsRef.current && !productsRef.current.contains(event.target as Node)) {
-        setProductsOpen(false);
-      }
       if (profileRef.current && !profileRef.current.contains(event.target as Node)) {
         setProfileOpen(false);
       }
@@ -51,36 +47,41 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className={styles.headerWrapper}>
-
-
       {/* Main Navbar */}
       <nav className={`${styles.navbar} ${styles.navbarPremium}`}>
-        <Link href="/" className={styles.logoContainer}>
-          <img src="/logo.jpg" alt="Logo" className={styles.logoImage} />
 
+        {/* Logo Section with Text */}
+        <Link href="/" className={styles.logoContainer}>
+          <Image src="/logo.png" alt="Solar Clean" className={styles.logoImage} width={120} height={40} priority />
+          <div className={styles.logoTextBlock}>
+            <h2>Solar Clean</h2>
+            <p>Industrial Cleaning Solutions</p>
+          </div>
         </Link>
 
-        {/* Hamburger button for mobile */}
-        <button className={styles.hamburgerBtn} onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Menu">
-          &#9776;
-        </button>
+        {/* Desktop Navigation */}
         <div className={styles.navLinks}>
           <Link href="/" className={`${styles.navLink} ${isLinkActive('/')}`}>
             Home
           </Link>
-
-          <Link href="/product" className={`${styles.navLink} ${isLinkActive('/product')}`}>Product</Link>
-
+          <Link href="/product" className={`${styles.navLink} ${isLinkActive('/product')}`}>
+            Products
+          </Link>
           <Link href="/industries" className={`${styles.navLink} ${isLinkActive('/industries')}`}>
             Industries
           </Link>
           <Link href="/about" className={`${styles.navLink} ${isLinkActive('/about')}`}>
             About Us
           </Link>
-          <Link href="/contact" className={`${styles.navLink} ${isLinkActive('/contact')}`}>Contact</Link>
-          <Link href="/enquiry" className={`${styles.navLink} ${isLinkActive('/enquiry')}`}>Enquiry</Link>
+          <Link href="/contact" className={`${styles.navLink} ${isLinkActive('/contact')}`}>
+            Contact
+          </Link>
+          <Link href="/enquiry" className={`${styles.navLink} ${isLinkActive('/enquiry')}`}>
+            Enquiry
+          </Link>
         </div>
 
+        {/* Right Side Actions */}
         <div className={styles.navActions}>
           {/* B2B Smart Search Bar */}
           <form onSubmit={handleSearchSubmit} className={styles.searchBar}>
@@ -178,34 +179,56 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
             )}
           </div>
 
-          {/* Request Quote B2B Button */}
+          {/* Get a Quote CTA Button */}
           <button
-            onClick={() => {
-              const el = document.getElementById('b2b-quote-form');
-              if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                router.push('/contact#b2b-quote-form');
-              }
-            }}
+            onClick={() => router.push('/contact')}
             className={styles.headerQuoteBtn}
           >
-            Request Quote
+            Get a Quote →
           </button>
         </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          className={styles.hamburgerBtn}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Menu"
+        >
+          ☰
+        </button>
       </nav>
-{/* Mobile slide-in menu */}
-<div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
-  <button className={styles.hamburgerBtn} onClick={() => setMobileMenuOpen(false)} aria-label="Close">&times;</button>
-  <div className={styles.navLinks} onClick={() => setMobileMenuOpen(false)}>
-    <Link href="/" className={`${styles.navLink} ${isLinkActive('/')}`}>Home</Link>
-    <Link href="/product" className={`${styles.navLink} ${isLinkActive('/product')}`}>Product</Link>
-    <Link href="/industries" className={`${styles.navLink} ${isLinkActive('/industries')}`}>Industries</Link>
-    <Link href="/about" className={`${styles.navLink} ${isLinkActive('/about')}`}>About Us</Link>
-    <Link href="/contact" className={`${styles.navLink} ${isLinkActive('/contact')}`}>Contact</Link>
-    <Link href="/enquiry" className={`${styles.navLink} ${isLinkActive('/enquiry')}`}>Enquiry</Link>
-  </div>
-</div>
+
+      {/* Mobile slide-in menu */}
+      <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+        <button
+          className={styles.hamburgerBtn}
+          onClick={() => setMobileMenuOpen(false)}
+          aria-label="Close"
+          style={{ alignSelf: 'flex-end' }}
+        >
+          &times;
+        </button>
+        <div className={styles.navLinks} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/" className={`${styles.navLink} ${isLinkActive('/')}`}>Home</Link>
+          <Link href="/product" className={`${styles.navLink} ${isLinkActive('/product')}`}>Products</Link>
+          <Link href="/industries" className={`${styles.navLink} ${isLinkActive('/industries')}`}>Industries</Link>
+          <Link href="/about" className={`${styles.navLink} ${isLinkActive('/about')}`}>About Us</Link>
+          <Link href="/contact" className={`${styles.navLink} ${isLinkActive('/contact')}`}>Contact</Link>
+          <Link href="/enquiry" className={`${styles.navLink} ${isLinkActive('/enquiry')}`}>Enquiry</Link>
+
+          {/* Mobile CTA Button */}
+          <button
+            onClick={() => {
+              router.push('/contact');
+              setMobileMenuOpen(false);
+            }}
+            className={styles.headerQuoteBtn}
+            style={{ marginTop: '1rem', width: '100%' }}
+          >
+            Get a Quote →
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

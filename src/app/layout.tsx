@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import TopBar from '@/components/TopBar';
+
 
 import { AuthProvider } from "@/components/AuthProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
+import TopBar from '@/components/TopBar';
+import Navbar from '@/components/Navbar';
 import Footer from "@/components/Footer";
 import FloatingFeatures from "@/components/FloatingFeatures";
 
@@ -34,12 +36,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <TopBar />
+        
         <AuthProvider>
           <ThemeProvider>
             <CartProvider>
               <ExtraFeaturesProvider>
-                {children}
+                <TopBar />
+        <Navbar />
                 <FloatingFeatures />
                 <Footer />
               </ExtraFeaturesProvider>

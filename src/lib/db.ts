@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { kv } from '@vercel/kv';
+// import { kv } from '@vercel/kv'; // removed static import; using dynamic import
 
 const DB_PATH = path.join(process.cwd(), 'db.json');
 const KV_KEY = 'solar_mushroom_db';
@@ -102,35 +102,11 @@ function saveLocalDb(data: DatabaseSchema): boolean {
 }
 
 export async function getDb(): Promise<DatabaseSchema> {
-  if (process.env.KV_REST_API_URL) {
-    try {
-      const data = await kv.get<DatabaseSchema>(KV_KEY);
-      if (data) {
-        if (!data.quotes) {
-          data.quotes = [];
-        }
-        return data;
-      }
-      // Seed Vercel KV with local db or initial state if it's empty
-      const initialDb = getLocalDb();
-      await kv.set(KV_KEY, initialDb);
-      return initialDb;
-    } catch (error) {
-      console.error('Error reading from Vercel KV, falling back to local database:', error);
-    }
-  }
+  // Directly use the local JSON database; Vercel KV is omitted for this environment.
   return getLocalDb();
 }
 
 export async function saveDb(data: DatabaseSchema): Promise<boolean> {
-  if (process.env.KV_REST_API_URL) {
-    try {
-      await kv.set(KV_KEY, data);
-      return true;
-    } catch (error) {
-      console.error('Error writing to Vercel KV:', error);
-      return false;
-    }
-  }
+  // Save directly to the local JSON file; Vercel KV integration omitted.
   return saveLocalDb(data);
 }
